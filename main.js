@@ -1,17 +1,27 @@
-let nombre = prompt("Ingresa tu nombre")
-let apellido = prompt("Ingresa tu apellido")
+let numero1 = parseInt(prompt("Ingrese un número mayor a 1000"))
 
-let num1 = parseInt(prompt("Ingresa un número para sumar"))
-let num2 = parseInt(prompt("Ingresa otro número"))
+if (numero1 > 1000) {
+    alert("El número A ingresado es mayor a 1000")
+} else {
+    alert("El número ingresado no es mayor a 1000")
+}
 
-let texto1 = "FELIPE"
-let texto2 = "PARDO"
+///
 
-alumnoNombre = (nombre + " " + apellido)
-mensajeTexto = (texto1 + texto2)
+let nombreUsuario = prompt("Ingrese su nombre de usuario")
 
-suma = (num1 + num2)
+if (nombreUsuario == "Felipe") {
+    console.log("Hola " + nombreUsuario);
+} else {
+    console.log("¿Quién ***** sos?");
+}
 
-alert("Hola " + mensajeTexto)
-console.log("¡¡¡Hola " + alumnoNombre + "!!!")
-console.log(suma)
+///
+
+let numero2 = parseInt(prompt("Ingrese un número entre 10 y 50"))
+
+if ((numero2 > 10) && (numero2 < 50)) {
+    alert("El valor ingresado es óptimo")
+} else {
+    alert("El número ingresado no está entre 10 y 50")
+}
