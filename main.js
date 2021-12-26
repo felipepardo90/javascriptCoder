@@ -1,27 +1,45 @@
-let numero1 = parseInt(prompt("Ingrese un número mayor a 1000"))
+//Contador hasta 10
 
-if (numero1 > 1000) {
-    alert("El número A ingresado es mayor a 1000")
-} else {
-    alert("El número ingresado no es mayor a 1000")
+let numero = parseInt(prompt("Ingresa un número"))
+
+for (i = numero; i <= 15; i++) {
+    alert(`Contador hasta 15 --->${i}`)
 }
 
-///
+// ingreso
 
-let nombreUsuario = prompt("Ingrese su nombre de usuario")
+let nombre = prompt("Ingrese un usuario válido: CARLOS, ANA, JUAN GABRIEL o MELINA. Escriba 'ESC' para salir")
 
-if (nombreUsuario == "Felipe") {
-    console.log("Hola " + nombreUsuario);
-} else {
-    console.log("¿Quién ***** sos?");
+while (nombre != "ESC") {
+    switch (nombre) {
+
+        case "CARLOS":
+            alert("HOLA CARLOS");
+            break;
+        case "ANA":
+            alert("HOLA ANA");
+            break;
+        case "JUAN GABRIEL":
+            alert("HOLA JUAN GABRIEL");
+            break;
+        case "MELINA":
+            alert("HOLA MELINA");
+            break;
+        default:
+            alert("Usuario no válido")
+            break
+    }
+    nombre = prompt(" Ingrese un usuario válido. Escriba 'ESC' para salir")
 }
 
-///
+// repetición 
 
-let numero2 = parseInt(prompt("Ingrese un número entre 10 y 50"))
+let numerox = parseInt(prompt("Ingresa un número menor o igual a 5"))
 
-if ((numero2 > 10) && (numero2 < 50)) {
-    alert("El valor ingresado es óptimo")
-} else {
-    alert("El número ingresado no está entre 10 y 50")
+for (i = 1; i <= 5; i++) {
+    alert(`Hola. Esta es la iteración N° --->${i}`)
+    if (i == numerox) {
+        break
+    }
 }
+alert("Fin del ciclo")
