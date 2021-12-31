@@ -10,6 +10,10 @@
 </head>
 
 <body>
+
+    <!-- CALCULADORA -->
+
+
     <h1>CALCULAPP</h1>
     <div class="calculApp">
         <form name="calculadora">
@@ -34,6 +38,18 @@
             <input type="button" value="0" onclick="document.calculadora.calc.value+='0'">
             <input type="button" value="=" onclick="document.calculadora.calc.value=eval(document.calculadora.calc.value)">
             <input type="button" value="/" onclick="document.calculadora.calc.value+='/'">
+
+        </form>
+
+        <!-- FUNCION CALCULO PROMEDIO -->
+
+        <h4>Se necesita el promedio simple para un cálculo de cobro de interés</h4>
+        <form action="">
+            <input type="texto" id="num1">
+            <input type="texto" id="num2">
+            <input type="texto" id="num3">
+            <input type="button" value="promedio">
+            <input type="reset" value="Clean">
 
         </form>
     </div>

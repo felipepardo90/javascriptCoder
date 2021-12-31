@@ -23,3 +23,12 @@
 // }
 
 // document.write(calculadora(numero1, operador, numero2))
+
+var promedio = function(num1, num2, num3) {
+    var num1 = parseInt(document.getElementById("num1").value)
+    var num2 = parseInt(document.getElementById("num2").value)
+    var num3 = parseInt(document.getElementById("num3").value)
+
+    var resultado = (num1 + num2 + num3) / 3
+    return resultado
+}
