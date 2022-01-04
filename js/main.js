@@ -1,34 +1,28 @@
-// let numero1 = parseInt(prompt("Ingresa un número"))
-// let operador = prompt("Escoge un operador (+, -, * o /)")
-// let numero2 = parseInt(prompt("Ingresa otro número"))
+function solicitarPréstamos() {
 
-// function calculadora(numero1, operador, numero2) {
-//     switch (operador) {
-//         case "+":
-//             return numero1 + numero2
-//             break
-//         case "-":
-//             return numero1 - numero2
-//             break
-//         case "/":
-//             return numero1 / numero2
-//             break
-//         case "*":
-//             return numero1 * numero2
-//             break
-//         default:
-//             return 0
-//             break
-//     }
-// }
-
-// document.write(calculadora(numero1, operador, numero2))
-
-var promedio = function(num1, num2, num3) {
-    var num1 = parseInt(document.getElementById("num1").value)
-    var num2 = parseInt(document.getElementById("num2").value)
-    var num3 = parseInt(document.getElementById("num3").value)
-
-    var resultado = (num1 + num2 + num3) / 3
-    return resultado
+    if (montoInicial > 50000) {
+        alert("No están aprobados préstamos mayores a 50.000")
+    } else if (montoInicial < 10000) {
+        alert("No están aprobados préstamos menores a 10.000")
+    } else {
+        alert("Su préstamo personal fue aprobado")
+    }
 }
+
+
+function sumarIva(montoInicial, iva) {
+    let montoFinal = montoInicial * iva
+    return montoFinal
+}
+
+
+function valorFinal() {
+    alert(`El cálculo final de su préstamo con IVA es de ${montoFinal}`)
+}
+
+let montoInicial = parseInt(prompt("Ingresa un monto"))
+const iva = 1.215 //TNA 21.5
+let montoFinal = sumarIva(montoInicial, iva)
+solicitarPréstamos()
+sumarIva(montoInicial, iva)
+valorFinal()
