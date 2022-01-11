@@ -34,15 +34,23 @@ function capturar() {
 
         this.monto = monto
         this.cuotas = cuotas
-        alert(`Vas a solicitar un préstamo de ${monto} en ${cuotas} cuotas. ¿Deseas continuar?`)
+        alert(`Vas a solicitar un préstamo de ${monto} a pagar en ${cuotas} cuotas. ¿Deseas continuar?`)
 
     }
-
 
     let seleccionarMonto = document.getElementById("monto").value
     let seleccionarCuotas = document.getElementById("cuotas").value
 
     console.log(seleccionarMonto, seleccionarCuotas)
 
-    let nuevoPrestamo = new Prestamo(seleccionarMonto, seleccionarCuotas)
+    nuevoPrestamo = new Prestamo(seleccionarMonto, seleccionarCuotas)
+    console.log(nuevoPrestamo)
+    agregar()
+}
+
+let database = []
+
+function agregar() {
+    database.push(nuevoPrestamo)
+    console.log(database)
 }

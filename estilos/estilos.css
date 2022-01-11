@@ -5,20 +5,59 @@
 }
 
 body {
-    background-color: coral;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #e5e5f7;
+    background-image: linear-gradient(#f48d00 2.4000000000000004px, transparent 2.4000000000000004px), linear-gradient(90deg, #f48d00 2.4000000000000004px, transparent 2.4000000000000004px), linear-gradient(#f48d00 1.2000000000000002px, transparent 1.2000000000000002px), linear-gradient(90deg, #f48d00 1.2000000000000002px, #e5e5f7 1.2000000000000002px);
+    background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px;
+    background-position: -2.4000000000000004px -2.4000000000000004px, -2.4000000000000004px -2.4000000000000004px, -1.2000000000000002px -1.2000000000000002px, -1.2000000000000002px -1.2000000000000002px;
+    background-repeat: repeat;
+    display: flex;
+    min-height: 100vh;
 }
 
-.formulario {
-    position: relative;
-    padding: 1rem;
-    margin: 1rem -.75rem 0;
-    border: solid #dee2e6;
-    border-width: 1px 0 0;
-    background-color: red;
+.form {
+    color: white;
+    background-color: #35dfa6;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px black;
+    text-align: center;
+}
+
+.form__titulo {
+    font-size: 2rem;
+    margin-bottom: .5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form__container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form__container--select {
+    width: 100%;
+    background: none;
+    font-size: 1rem;
+    padding: .6em .3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @media (min-width: 576px) {
-    .formulario {
+    .form__container {
         padding: 1.5rem;
         margin-right: 0;
         margin-left: 0;

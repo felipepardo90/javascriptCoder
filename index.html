@@ -12,13 +12,13 @@
 
 <body>
 
-    <form>
-        <h1>¡Pedí tu préstamo ahora!</h1>
-        <div class="formulario">
+    <form class="form">
+        <h1 class="form__titulo">¡Pedí tu préstamo ahora!</h1>
+        <div class="form__container">
 
             <!-- MONTO -->
 
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="monto">
+            <select class="form__container--select form-select form-select-sm" aria-label=".form-select-sm example" id="monto">
         <option selected>Seleccione un monto</option>
         <option value="10.000">10.000</option>
         <option value="20.000">20.000</option>
@@ -30,7 +30,7 @@
 
             <!-- CUOTAS -->
 
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="cuotas">
+            <select class="form__container--select form-select form-select-sm" aria-label=".form-select-sm example" id="cuotas">
         <option selected>Cuotas</option>
         <option value="12">12 cuotas</option>
         <option value="24">24 cuotas</option>
@@ -40,11 +40,11 @@
 
       </select>
 
-            <button id="boton" class="btn btn-dark" type="reset" onclick="capturar()">Simulá tu préstamo</button>
+            <button id="boton" class="btn btn-warning " type="reset" onclick="capturar()">Simulá tu préstamo</button>
 
             <br><br>
 
-            <label for="customRange2" class="form-label">SIMULADOR</label>
+            <label for="customRange2" class="form-label form__container--labelRange">SIMULADOR</label>
             <input type="range" class="form-range" min="0" max="5" id="customRange2">
         </div>
 
