@@ -27,30 +27,57 @@
 // sumarIva(montoInicial, iva)
 // valorFinal()
 
+class Prestamo {
+    constructor(monto, cuotas) {
 
-function capturar() {
-
-    function Prestamo(monto, cuotas) {
-
+        // Tasa Nominal Anual (TNA) sin IVA: Mínima: 45% - Máxima 70%
         this.monto = monto
         this.cuotas = cuotas
-        alert(`Vas a solicitar un préstamo de ${monto} a pagar en ${cuotas} cuotas. ¿Deseas continuar?`)
-
+        this.valorCuotas = 0
+    }
+    amortizacion() {
+        if (this.monto >= 100000) {
+            this.valorCuotas = (this.monto * 1.45) / this.cuotas
+        } else {
+            this.valorCuotas = (this.monto * 1.70) / this.cuotas
+        }
     }
 
-    let seleccionarMonto = document.getElementById("monto").value
-    let seleccionarCuotas = document.getElementById("cuotas").value
+}
 
-    console.log(seleccionarMonto, seleccionarCuotas)
+
+function calcular() {
+
+    const seleccionarMonto = document.getElementById("monto").value
+    const seleccionarCuotas = document.getElementById("cuotas").value
+
+    // console.log(seleccionarMonto, seleccionarCuotas)
 
     nuevoPrestamo = new Prestamo(seleccionarMonto, seleccionarCuotas)
-    console.log(nuevoPrestamo)
+
+    // console.log(nuevoPrestamo)
+
+    let valorCuotas = nuevoPrestamo.amortizacion()
+
+
     agregar()
 }
 
-let database = []
+let tablaPrestamo = []
 
 function agregar() {
-    database.push(nuevoPrestamo)
-    console.log(database)
+    tablaPrestamo.push(nuevoPrestamo)
+    console.log(tablaPrestamo)
+    document.getElementById("tabla").innerHTML += `<tbody><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`
+    alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
 }
+
+tablaPrestamo.sort((a, b) => {
+    if (a > b) {
+        return -1
+    }
+    if (a < b) {
+        return -1
+    }
+    return 0
+})

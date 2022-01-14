@@ -22,8 +22,12 @@
         <option selected>Seleccione un monto</option>
         <option value="10.000">10.000</option>
         <option value="20.000">20.000</option>
+        <option value="30.000">30.000</option>
         <option value="50.000">50.000</option>
+        <option value="75.000">75.000</option>
+        <option value="90.000">90.000</option>
         <option value="100.000">100.000</option>
+        <option value="150.000">150.000</option>
         <option value="200.000">200.000</option>
 
       </select>
@@ -40,12 +44,25 @@
 
       </select>
 
-            <button id="boton" class="btn btn-warning " type="reset" onclick="capturar()">Simulá tu préstamo</button>
+            <button id="boton" class="btn btn-warning" type="reset" onclick="calcular()">Simulá tu préstamo</button>
 
             <br><br>
 
-            <label for="customRange2" class="form-label form__container--labelRange">SIMULADOR</label>
-            <input type="range" class="form-range" min="0" max="5" id="customRange2">
+            <!--<label for="customRange2" class="form-label form__container--labelRange">SIMULADOR</label>
+             <input type="range" class="form-range" min="0" max="5" id="customRange2"> -->
+
+            <div class="container">
+                <table id="tabla" class="tabla table table-striped table-success">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Monto</th>
+                            <th>Cuotas</th>
+                            <th>Final</th>
+                        </tr>
+                    </thead>
+
+                </table>
+            </div>
         </div>
 
 
