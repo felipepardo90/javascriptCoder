@@ -72,11 +72,20 @@ function agregar() {
     alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
 }
 
-tablaPrestamo.sort((a, b) => {
-    if (a > b) {
-        return -1
+// Array creado para desafío --- préstamos más solicitados
+
+let mostRequested = [
+    { monto: 75.000, cuotas: 24, final: 5.312 }, { monto: 20.000, cuotas: 12, final: 2.833 }, { monto: 90.000, cuotas: 36, final: 4.250 }, { monto: 50.000, cuotas: 24, final: 3.541 },
+
+]
+
+console.log(mostRequested)
+
+mostRequested.sort((a, b) => {
+    if (a.final > b.monfinalto) {
+        return 1
     }
-    if (a < b) {
+    if (a.final < b.final) {
         return -1
     }
     return 0
