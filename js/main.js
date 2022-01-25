@@ -8,9 +8,9 @@ class Prestamo {
     }
     amortizacion() {
         if (this.monto >= 100000) {
-            this.valorCuotas = (this.monto * 1.45) / this.cuotas
+            this.valorCuotas = ((this.monto * 1.45) / this.cuotas).toFixed(3)
         } else {
-            this.valorCuotas = (this.monto * 1.70) / this.cuotas
+            this.valorCuotas = ((this.monto * 1.70) / this.cuotas).toFixed(3)
         }
     }
 
@@ -40,6 +40,7 @@ function calcular() {
     nuevoPrestamo = new Prestamo(seleccionarMonto, seleccionarCuotas)
 
     // console.log(nuevoPrestamo)
+
 
     let valorCuotas = nuevoPrestamo.amortizacion()
 
