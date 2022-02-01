@@ -49,7 +49,7 @@ function calcular() {
 }
 
 function getTablaPrestamo() {
-    let storedList = localStorage.getItem("localTablaPrestamo")
+    let storedList = localStorage.getItem('localTablaPrestamo')
     if (storedList == null) {
         tablaPrestamo = [];
     } else {
@@ -58,10 +58,20 @@ function getTablaPrestamo() {
     return tablaPrestamo
 }
 
-getTablaPrestamo()
-
+getTablaPrestamo() // función llamada para prueba
+console.log(tablaPrestamo) // llamada para prueba
 
 
 function localStorageTablaPrestamo(plist) {
-    localStorage.setItem("localTablaPrestamo", JSON.stringify(plist))
+    localStorage.setItem('localTablaPrestamo', JSON.stringify(plist))
 }
+
+
+// EJEMPLO para jQuery -- 
+
+// Desaparecer título .form__título al hacer click en #boton
+$(document).ready(function() {
+    $("#boton").click(function() {
+        $(".form__titulo").hide();
+    });
+});
