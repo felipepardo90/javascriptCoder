@@ -1,0 +1,38 @@
+.form {
+    color: white;
+    background-color: mediumaquamarine;
+    width: 90%;
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px black;
+    text-align: center;
+    &__titulo {
+        font-size: 32px;
+        margin-bottom: .5em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.form__container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+    &--select {
+        width: 100%;
+        background: none;
+        font-size: 1rem;
+        padding: .6em .3em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.btn {
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .form__container {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+}
+
+.form {
+  color: white;
+  background-color: mediumaquamarine;
+  width: 90%;
+  margin: 50px auto;
+  max-width: 500px;
+  padding: 4.5em 3em;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 10px -5px black;
+          box-shadow: 0 5px 10px -5px black;
+  text-align: center;
+}
+
+.form__titulo {
+  font-size: 32px;
+  margin-bottom: .5em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form__container {
+  margin-top: 3em;
+  display: -ms-grid;
+  display: grid;
+  gap: 2.5em;
+}
+
+.form__container--select {
+  width: 100%;
+  background: none;
+  font-size: 1rem;
+  padding: .6em .3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+  border-radius: 5px;
+  width: 75%;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*# sourceMappingURL=estilos.css.map */

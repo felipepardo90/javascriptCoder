@@ -1,3 +1,10 @@
+$("body").css({
+    "background-color": "orangered",
+    "height": "100vh",
+    "font-family": "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+});
+
+
 class Prestamo {
     constructor(monto, cuotas) {
 
@@ -26,7 +33,7 @@ boton.addEventListener("click", () => {
     tablaPrestamo.push(nuevoPrestamo)
     console.log(tablaPrestamo)
     document.getElementById("tabla").innerHTML += `<tbody><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`
-    alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
+        // alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
 
     localStorageTablaPrestamo(tablaPrestamo)
 })
@@ -66,12 +73,18 @@ function localStorageTablaPrestamo(plist) {
     localStorage.setItem('localTablaPrestamo', JSON.stringify(plist))
 }
 
+// ANIMACION CON jQUERY
 
-// EJEMPLO para jQuery -- 
-
-// Desaparecer título .form__título al hacer click en #boton
-$(document).ready(function() {
-    $("#boton").click(function() {
-        $(".form__titulo").hide();
-    });
+$("#boton").click(function() {
+    var formTitulo = $(".form__titulo");
+    formTitulo.animate({
+        fontSize: '48px',
+        opacity: '0.6',
+    }, "slow");
+    formTitulo.animate({
+        fontSize: '32px',
+        opacity: '1',
+    }, "slow");
+    $("#tabla").fadeOut("slow");
+    $("#tabla").fadeIn("slow");
 });
