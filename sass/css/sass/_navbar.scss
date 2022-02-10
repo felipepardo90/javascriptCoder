@@ -1,0 +1,104 @@
+// NAVEGADOR
+.navegador {
+    height: 80px;
+    width: 100%;
+    background-color: mediumaquamarine;
+    color: white;
+    &__logo {
+        font: {
+            size: 35px;
+            weight: bold;
+        }
+        color: white;
+        padding: 0 100px;
+        line-height: 80px;
+    }
+    ul {
+        float: right;
+        margin-right: 40px;
+    }
+    li {
+        display: inline-block;
+        margin: 0 8px;
+        line-height: 80px;
+    }
+    a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        padding: 7px 10px;
+        border-radius: 3px;
+        &:hover {
+            border: 1px solid white;
+            transition: .5s;
+            color: orangered;
+        }
+        &.navegador__active {
+            border: 1px solid white;
+        }
+    }
+    #icon {
+        color: white;
+        font-size: 30px;
+        line-height: 80px;
+        float: right;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+// MEDIA_QUERIES
+@media (max-width: 1048px) {
+    .navegador {
+        &__logo {
+            font-size: 32px;
+            padding-left: 60px;
+        }
+        ul {
+            margin-right: 20px;
+        }
+        a {
+            font-size: 17px;
+        }
+    }
+}
+
+@media (max-width: 909px) {
+    .navegador {
+        #icon {
+            display: block;
+        }
+        ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: mediumaquamarine;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            &.show {
+                left: 0;
+            }
+        }
+        li {
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+        }
+        a {
+            font-size: 20px;
+            &:hover {
+                border: none;
+                color: orangered;
+            }
+            &.navegador__active {
+                border: none;
+            }
+        }
+    }
+}
