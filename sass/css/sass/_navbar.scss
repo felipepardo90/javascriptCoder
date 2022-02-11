@@ -52,7 +52,7 @@
 }
 
 // MEDIA_QUERIES
-@media (max-width: 1048px) {
+@media (max-width: 992px) {
     .navegador {
         &__logo {
             font-size: 32px;
@@ -67,7 +67,7 @@
     }
 }
 
-@media (max-width: 909px) {
+@media (max-width: 576px) {
     .navegador {
         #icon {
             display: block;
