@@ -28,3 +28,5 @@ function comentarios() {
 }
 
 // El Ejemplo está hecho con un doc JSON de JSON PLACEHOLDER
+
+// PARA VER COMENTARIOS, PRESIONAR EN VER COMENTARIOS

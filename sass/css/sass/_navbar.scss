@@ -52,7 +52,7 @@
 }
 
 // MEDIA_QUERIES
-@media (max-width: 992px) {
+@media (max-width: 1075px) {
     .navegador {
         &__logo {
             font-size: 32px;
@@ -67,7 +67,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 974px) {
     .navegador {
         #icon {
             display: block;
@@ -99,6 +99,25 @@
             &.navegador__active {
                 border: none;
             }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .form {
+        background-color: blue;
+    }
+    .navegador {
+        height: 60px;
+        &__logo {
+            font-size: 24px;
+            padding-left: 20px;
+            line-height: 60px;
+        }
+        #icon {
+            font-size: 20px;
+            margin-right: 20px;
+            line-height: 60px;
         }
     }
 }

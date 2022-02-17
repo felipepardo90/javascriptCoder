@@ -20,7 +20,7 @@
   color: white;
   background-color: mediumaquamarine;
   width: 90%;
-  margin: 50px auto;
+  margin: 20px auto;
   max-width: 500px;
   padding: 4.5em 3em;
   border-radius: 10px;
@@ -117,7 +117,7 @@
   display: none;
 }
 
-@media (max-width: 1048px) {
+@media (max-width: 1075px) {
   .navegador__logo {
     font-size: 32px;
     padding-left: 60px;
@@ -130,7 +130,7 @@
   }
 }
 
-@media (max-width: 909px) {
+@media (max-width: 974px) {
   .navegador #icon {
     display: block;
   }
@@ -162,6 +162,25 @@
   }
   .navegador a.navegador__active {
     border: none;
+  }
+}
+
+@media (max-width: 410px) {
+  .form {
+    background-color: blue;
+  }
+  .navegador {
+    height: 60px;
+  }
+  .navegador__logo {
+    font-size: 24px;
+    padding-left: 20px;
+    line-height: 60px;
+  }
+  .navegador #icon {
+    font-size: 20px;
+    margin-right: 20px;
+    line-height: 60px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
