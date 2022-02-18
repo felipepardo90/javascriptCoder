@@ -36,9 +36,16 @@
             <li><a href="#">Home Banking</a></li>
         </ul>
         <label id="icon">
-            <i class="fas fa-bars"></i>
-        </label>
+        <i class="fas fa-bars"></i>
+    </label>
     </nav>
+
+    <div class="container">
+
+        <div class="imagenPortada">
+            <img src="./imagenes/familia.jpg" alt="Familia">
+        </div>
+    </div>
 
     <!--  FORM -->
 
@@ -49,6 +56,14 @@
 
 
         <div class="form__container">
+
+            <!-- DATOS PERSONA -->
+
+            <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre/s">
+
+            <input id="apellido" name="apellido" type="number" class="form-control" placeholder="Apellido/s">
+
+            <input id="dni" name="dni" type="number" class="form-control numeric" placeholder="DNI">
 
             <!-- MONTO -->
 
@@ -71,10 +86,10 @@
             <select class="form__container--select form-select form-select-sm" aria-label=".form-select-sm example" id="cuotas">
         <option selected>Cuotas</option>
         <option value="12">12 cuotas</option>
+        <option value="18">18 cuotas</option>
         <option value="24">24 cuotas</option>
-        <option value="36">36 cuotas</option>
-        <option value="48">48 cuotas</option>           
-        <option value="60">60 cuotas</option>
+        <option value="30">30 cuotas</option>  
+
 
       </select>
 

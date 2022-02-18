@@ -31,7 +31,6 @@ const boton = document.getElementById("boton")
 
 boton.addEventListener("click", () => {
     tablaPrestamo.push(nuevoPrestamo)
-    console.log(tablaPrestamo)
     document.getElementById("tabla").innerHTML += `<tbody><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`
         // alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
 
@@ -65,8 +64,6 @@ function getTablaPrestamo() {
     return tablaPrestamo
 }
 
-getTablaPrestamo() // función llamada para prueba
-console.log(tablaPrestamo) // llamada para prueba
 
 
 function localStorageTablaPrestamo(plist) {

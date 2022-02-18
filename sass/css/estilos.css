@@ -5,6 +5,13 @@
           box-sizing: border-box;
 }
 
+.imagenPortada img {
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
 @media (min-width: 576px) {
   .form__container {
     padding: 1.5rem;
@@ -14,6 +21,11 @@
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
   }
+}
+
+.aclara {
+  color: black;
+  bottom: 0;
 }
 
 .form {
@@ -76,7 +88,7 @@
 
 .navegador ul {
   float: right;
-  margin-right: 40px;
+  margin: 0 40px auto 0;
 }
 
 .navegador li {
