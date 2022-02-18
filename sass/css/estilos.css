@@ -139,7 +139,7 @@
     width: 100%;
     height: 100vh;
     background-color: mediumaquamarine;
-    top: 80px;
+    top: 60px;
     left: -100%;
     text-align: center;
     -webkit-transition: all .5s;
@@ -166,9 +166,6 @@
 }
 
 @media (max-width: 410px) {
-  .form {
-    background-color: blue;
-  }
   .navegador {
     height: 60px;
   }
