@@ -36,3 +36,28 @@
     font-weight: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+// DOLAR 
+
+.user {
+    background-color: darkcyan;
+border:  5px outset green;
+color: white;
+    text-align: center;
+    
+display: inline-block;
+}
+
+// BODY
+
+.prestamosForm {
+float: left;
+display: inline;
+min-width: 800px;
+}
+
+.frameDolar {
+    float: right;
+    display: inline;
+margin: auto;
+    }

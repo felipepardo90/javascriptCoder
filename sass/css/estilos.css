@@ -71,6 +71,26 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.user {
+  background-color: darkcyan;
+  border: 5px outset green;
+  color: white;
+  text-align: center;
+  display: inline-block;
+}
+
+.prestamosForm {
+  float: left;
+  display: inline;
+  min-width: 800px;
+}
+
+.frameDolar {
+  float: right;
+  display: inline;
+  margin: auto;
+}
+
 .navegador {
   height: 80px;
   width: 100%;

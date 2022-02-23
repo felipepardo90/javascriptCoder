@@ -45,80 +45,97 @@
         <div class="imagenPortada">
             <img src="./imagenes/familia.jpg" alt="Familia">
         </div>
+
+
+        <!--  FORM -->
+    
+    <div class="prestamosForm">
+        <form class="form">
+    
+            <h1 class="form__titulo">¡Pedí tu préstamo ahora!</h1>
+    
+    
+            <div class="form__container">
+    
+                <!-- DATOS PERSONA -->
+    
+                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre/s">
+    
+                <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido/s">
+    
+                <input id="dni" name="dni" type="number" class="form-control numeric" placeholder="DNI">
+    
+                <!-- MONTO -->
+    
+                <select class="form__container--select form-select form-select-sm" aria-label=".form-select-sm example" id="monto" autofocus required>
+            <option value="" selected disabled>Seleccione un monto</option>
+            <option value="10.000">10.000</option>
+            <option value="20.000">20.000</option>
+            <option value="30.000">30.000</option>
+            <option value="50.000">50.000</option>
+            <option value="75.000">75.000</option>
+            <option value="90.000">90.000</option>
+            <option value="100.000">100.000</option>
+            <option value="150.000">150.000</option>
+            <option value="200.000">200.000</option>
+    
+          </select>
+    
+                <!-- CUOTAS -->
+    
+                <select class="form__container--select form-select form-select-sm" aria-label=".form-select-sm example" id="cuotas" required>
+            <option value="" selected disabled>Cuotas</option>
+            <option value="12">12 cuotas</option>
+            <option value="18">18 cuotas</option>
+            <option value="24">24 cuotas</option>
+            <option value="30">30 cuotas</option>  
+    
+    
+          </select>
+    
+                <button id="boton" class="btn btn-warning" type="reset" onclick="calcular()">Simulá tu préstamo</button>
+    
+                <br><br>
+    
+                <!--<label for="customRange2" class="form-label form__container--labelRange">SIMULADOR</label>
+                 <input type="range" class="form-range" min="0" max="5" id="customRange2"> -->
+    
+                <div class="container">
+                    <table id="tabla" class="tabla table table-striped table-success">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>Monto</th>
+                                <th>Cuotas</th>
+                                <th>Final</th>
+                            </tr>
+                        </thead>
+    
+                    </table>
+                </div>
+            </div>
+        
+        
+        </form>
+    </div>
+    
+    <!-- frame Dólar -->
+        <div class="frameDolar">
+
+    <iframe width="300px" height="690px" src="https://www.dolarsi.com/func/moduloArriba-n.html" frameborder="0" scrolling="0" allowfullscreen=""></iframe>
+
     </div>
 
-    <!--  FORM -->
-
-
-    <form class="form">
-
-        <h1 class="form__titulo">¡Pedí tu préstamo ahora!</h1>
-
-
-        <div class="form__container">
-
-            <!-- DATOS PERSONA -->
-
-            <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre/s">
-
-            <input id="apellido" name="apellido" type="number" class="form-control" placeholder="Apellido/s">
-
-            <input id="dni" name="dni" type="number" class="form-control numeric" placeholder="DNI">
-
-            <!-- MONTO -->
-
-            <select class="form__container--select form-select form-select-sm" aria-label=".form-select-sm example" id="monto">
-        <option selected>Seleccione un monto</option>
-        <option value="10.000">10.000</option>
-        <option value="20.000">20.000</option>
-        <option value="30.000">30.000</option>
-        <option value="50.000">50.000</option>
-        <option value="75.000">75.000</option>
-        <option value="90.000">90.000</option>
-        <option value="100.000">100.000</option>
-        <option value="150.000">150.000</option>
-        <option value="200.000">200.000</option>
-
-      </select>
-
-            <!-- CUOTAS -->
-
-            <select class="form__container--select form-select form-select-sm" aria-label=".form-select-sm example" id="cuotas">
-        <option selected>Cuotas</option>
-        <option value="12">12 cuotas</option>
-        <option value="18">18 cuotas</option>
-        <option value="24">24 cuotas</option>
-        <option value="30">30 cuotas</option>  
-
-
-      </select>
-
-            <button id="boton" class="btn btn-warning" type="reset" onclick="calcular()">Simulá tu préstamo</button>
-
-            <br><br>
-
-            <!--<label for="customRange2" class="form-label form__container--labelRange">SIMULADOR</label>
-             <input type="range" class="form-range" min="0" max="5" id="customRange2"> -->
-
-            <div class="container">
-                <table id="tabla" class="tabla table table-striped table-success">
-                    <thead class="thead-inverse">
-                        <tr>
-                            <th>Monto</th>
-                            <th>Cuotas</th>
-                            <th>Final</th>
-                        </tr>
-                    </thead>
-
-                </table>
-            </div>
-        </div>
-    </form>
+    
+  <div id="app"></div>
+    </div>
 
 
 
 
 
+
+
+    <script src="js/ajax.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animates.js"></script>
     <script src="js/navbar.js"></script>
