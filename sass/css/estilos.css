@@ -1,3 +1,23 @@
+.color1 {
+  color: #121f56;
+}
+
+.color2 {
+  color: #603e8c;
+}
+
+.color3 {
+  color: #20b1d8;
+}
+
+.color4 {
+  color: #20dbd8;
+}
+
+.color5 {
+  color: #b9efed;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,14 +38,26 @@
     margin-right: 0;
     margin-left: 0;
     border-width: 1px;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
   }
+}
+
+.user {
+  background-color: darkcyan;
+  border: 3px double;
+  color: white;
+  text-align: center;
+  display: inline-block;
 }
 
 .aclara {
   color: black;
   bottom: 0;
+}
+
+#app {
+  display: none;
 }
 
 .form {
@@ -43,8 +75,8 @@
 
 .form__titulo {
   font-size: 32px;
-  margin-bottom: .5em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 0.5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .form__container {
@@ -58,8 +90,8 @@
   width: 100%;
   background: none;
   font-size: 1rem;
-  padding: .6em .3em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 0.6em 0.3em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn {
@@ -68,27 +100,7 @@
   margin: auto;
   text-transform: uppercase;
   font-weight: 1rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.user {
-  background-color: darkcyan;
-  border: 5px outset green;
-  color: white;
-  text-align: center;
-  display: inline-block;
-}
-
-.prestamosForm {
-  float: left;
-  display: inline;
-  min-width: 800px;
-}
-
-.frameDolar {
-  float: right;
-  display: inline;
-  margin: auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .navegador {
@@ -96,6 +108,7 @@
   width: 100%;
   background-color: mediumaquamarine;
   color: white;
+  position: fixed;
 }
 
 .navegador__logo {
@@ -130,8 +143,8 @@
 
 .navegador a:hover {
   border: 1px solid white;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   color: orangered;
 }
 
@@ -174,8 +187,8 @@
     top: 60px;
     left: -100%;
     text-align: center;
-    -webkit-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .navegador ul.show {
     left: 0;

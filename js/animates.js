@@ -1,15 +1,9 @@
-// ANIMACION CON jQUERY
+/* botón Cotización dólar
+la acción que realizará el botón es deslizar las cotizaciones en tiempo real del precio del dólar, obtenidas de un archivo json con ajax hacia el div #app
+*/
 
-$("#boton").click(function() {
-    var formTitulo = $(".form__titulo");
-    formTitulo.animate({
-        fontSize: '48px',
-        opacity: '0.6',
-    }, "slow");
-    formTitulo.animate({
-        fontSize: '32px',
-        opacity: '1',
-    }, "slow");
-    $("#tabla").fadeOut("slow");
-    $("#tabla").fadeIn("slow");
+$(document).ready(function(){
+  $("#dolarToggle").click(function(){
+    $("#app").slideToggle();
+  });
 });

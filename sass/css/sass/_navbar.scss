@@ -1,120 +1,121 @@
 // NAVEGADOR
 .navegador {
-    height: 80px;
-    width: 100%;
-    background-color: mediumaquamarine;
+  height: 80px;
+  width: 100%;
+  background-color: mediumaquamarine;
+  color: white;
+  position: fixed;
+  &__logo {
+    font: {
+      size: 35px;
+      weight: bold;
+    }
     color: white;
-    &__logo {
-        font: {
-            size: 35px;
-            weight: bold;
-        }
-        color: white;
-        padding: 0 100px;
-        line-height: 80px;
+    padding: 0 100px;
+    line-height: 80px;
+  }
+  ul {
+    float: right;
+    margin: 0 40px auto 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+  }
+  a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    &:hover {
+      border: 1px solid white;
+      transition: 0.5s;
+      color: orangered;
     }
-    ul {
-        float: right;
-        margin: 0 40px auto 0;
+    &.navegador__active {
+      border: 1px solid white;
     }
-    li {
-        display: inline-block;
-        margin: 0 8px;
-        line-height: 80px;
-    }
-    a {
-        text-decoration: none;
-        list-style: none;
-        color: white;
-        font-size: 18px;
-        text-transform: uppercase;
-        border: 1px solid transparent;
-        padding: 7px 10px;
-        border-radius: 3px;
-        &:hover {
-            border: 1px solid white;
-            transition: .5s;
-            color: orangered;
-        }
-        &.navegador__active {
-            border: 1px solid white;
-        }
-    }
-    #icon {
-        color: white;
-        font-size: 30px;
-        line-height: 80px;
-        float: right;
-        margin-right: 40px;
-        cursor: pointer;
-        display: none;
-    }
+  }
+  #icon {
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
 }
 
 // MEDIA_QUERIES
 @media (max-width: 1075px) {
-    .navegador {
-        &__logo {
-            font-size: 32px;
-            padding-left: 60px;
-        }
-        ul {
-            margin-right: 20px;
-        }
-        a {
-            font-size: 17px;
-        }
+  .navegador {
+    &__logo {
+      font-size: 32px;
+      padding-left: 60px;
     }
+    ul {
+      margin-right: 20px;
+    }
+    a {
+      font-size: 17px;
+    }
+  }
 }
 
 @media (max-width: 974px) {
-    .navegador {
-        #icon {
-            display: block;
-        }
-        ul {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            background-color: mediumaquamarine;
-            top: 60px;
-            left: -100%;
-            text-align: center;
-            transition: all .5s;
-            &.show {
-                left: 0;
-            }
-        }
-        li {
-            display: block;
-            margin: 50px 0;
-            line-height: 30px;
-        }
-        a {
-            font-size: 20px;
-            &:hover {
-                border: none;
-                color: orangered;
-            }
-            &.navegador__active {
-                border: none;
-            }
-        }
+  .navegador {
+    #icon {
+      display: block;
     }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: mediumaquamarine;
+      top: 60px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      &.show {
+        left: 0;
+      }
+    }
+    li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    a {
+      font-size: 20px;
+      &:hover {
+        border: none;
+        color: orangered;
+      }
+      &.navegador__active {
+        border: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 410px) {
-    .navegador {
-        height: 60px;
-        &__logo {
-            font-size: 24px;
-            padding-left: 20px;
-            line-height: 60px;
-        }
-        #icon {
-            font-size: 20px;
-            margin-right: 20px;
-            line-height: 60px;
-        }
+  .navegador {
+    height: 60px;
+    &__logo {
+      font-size: 24px;
+      padding-left: 20px;
+      line-height: 60px;
     }
+    #icon {
+      font-size: 20px;
+      margin-right: 20px;
+      line-height: 60px;
+    }
+  }
 }
