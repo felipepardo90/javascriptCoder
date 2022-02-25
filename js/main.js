@@ -23,21 +23,6 @@ class Prestamo {
 
 }
 
-
-let tablaPrestamo = []
-
-
-const boton = document.getElementById("boton")
-
-boton.addEventListener("click", () => {
-    tablaPrestamo.push(nuevoPrestamo)
-    document.getElementById("tabla").innerHTML += `<tbody><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`
-        // alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
-
-    localStorageTablaPrestamo(tablaPrestamo)
-})
-
-
 function calcular() {
 
     const seleccionarMonto = document.getElementById("monto").value
@@ -49,10 +34,13 @@ function calcular() {
 
     // console.log(nuevoPrestamo)
 
-
     let valorCuotas = nuevoPrestamo.amortizacion()
 
 }
+
+
+
+/* AGREGANDO TABLA AL LOCAL STORAGE*/
 
 function getTablaPrestamo() {
     let storedList = localStorage.getItem('localTablaPrestamo')
