@@ -70,6 +70,7 @@
               type="text"
               class="form__container--input"
               placeholder="Nombre/s"
+              value=""
               required
               
             />
@@ -80,6 +81,7 @@
               type="text"
               class="form__container--input"
               placeholder="Apellido/s"
+              value=""
               required
             />
 
@@ -89,6 +91,7 @@
               type="number"
               class="form__container--input"
               placeholder="DNI"
+              value=""
               required
             />
 
@@ -125,14 +128,15 @@
               <option value="12">12 cuotas</option>
               <option value="18">18 cuotas</option>
               <option value="24">24 cuotas</option>
-              <option value="30">30 cuotas</option>
+              <option value="30">30 cuotas</option>      
+              <option value="36">36 cuotas</option>
             </select>
 
             <button
               id="boton"
               class="btn btn-primary"
               type="reset"
-              onclick="calcular()"
+              onclick="pushDatos()"
             >
               Simulá tu préstamo
             </button>

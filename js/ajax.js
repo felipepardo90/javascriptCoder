@@ -8,6 +8,7 @@ function fetchData() {
       return response.json();
     })
     .then((data) => {
+      // Filtrar datos en la constante filteredOutput (salida)
       const filteredOutput = data.filter((item) => {
         switch (item.casa.nombre) {
           case "Dolar Blue":
@@ -22,6 +23,7 @@ function fetchData() {
         }
       });
       let html = "";
+      // Integrando datos de la API en el HTML
       filteredOutput.forEach((item) => {
         html += '<div class="user container">';
         html += `<p>💵${item.casa.nombre}</p>`;

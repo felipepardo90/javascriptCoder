@@ -26,7 +26,8 @@ let tablaPrestamo = [];
 const boton = document.getElementById("boton");
 
 boton.addEventListener("click", () => {
-  tablaPrestamo.push(nuevoPrestamo)
+
+  tablaPrestamo.push(nuevoPrestamo);
   document.getElementById(
     "tabla"
   ).innerHTML += `<tbody><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`;
@@ -34,5 +35,5 @@ boton.addEventListener("click", () => {
 
   localStorageTablaPrestamo(tablaPrestamo);
 
-  console.log (tablaPrestamo)
+  console.log(tablaPrestamo);
 });
