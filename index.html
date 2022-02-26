@@ -68,8 +68,9 @@
               id="nombre"
               name="nombre"
               type="text"
-              class="form-control"
+              class="form__container--input"
               placeholder="Nombre/s"
+              required
               
             />
 
@@ -77,23 +78,25 @@
               id="apellido"
               name="apellido"
               type="text"
-              class="form-control"
+              class="form__container--input"
               placeholder="Apellido/s"
+              required
             />
 
             <input
               id="dni"
               name="dni"
               type="number"
-              class="form-control"
+              class="form__container--input"
               placeholder="DNI"
+              required
             />
 
             <!-- MONTO -->
 
             <select
-              class="form__container--select form-select form-select-sm"
-              aria-label=".form-select-sm example"
+              class="form__container--select"
+              aria-label=""
               id="monto"
               autofocus
               required
@@ -113,8 +116,8 @@
             <!-- CUOTAS -->
 
             <select
-              class="form__container--select form-select form-select-sm"
-              aria-label=".form-select-sm example"
+              class="form__container--select"
+              aria-label=""
               id="cuotas"
               required
             >

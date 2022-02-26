@@ -57,3 +57,16 @@ function getTablaPrestamo() {
 function localStorageTablaPrestamo(plist) {
     localStorage.setItem('localTablaPrestamo', JSON.stringify(plist))
 }
+
+/** TEST */
+
+const monto = document.getElementById("monto");
+
+monto.addEventListener("select", function (event) {
+  if (monto.validity.typeMismatch) {
+    monto.setCustomValidity("¡Ingrese un monto!");
+  } else {
+    monto.setCustomValidity("");
+  }
+  console.log(monto)
+});
