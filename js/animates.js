@@ -23,17 +23,16 @@ $(document).ready(function () {
 
 let tablaPrestamo = [];
 
-const boton = document.getElementById("boton");
+const botonTabla = document.getElementById("botonTabla");
 
-boton.addEventListener("click", () => {
-
+botonTabla.addEventListener("click", () => {
   tablaPrestamo.push(nuevoPrestamo);
   document.getElementById(
     "tabla"
-  ).innerHTML += `<tbody><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`;
+  ).innerHTML += `<tbody><td>${nuevoPrestamo.nombre}</td><td>${nuevoPrestamo.apellido}</td><td>${nuevoPrestamo.dni}</td><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`;
   // alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
 
   localStorageTablaPrestamo(tablaPrestamo);
 
-  console.log(tablaPrestamo);
+  // console.log(tablaPrestamo);
 });
