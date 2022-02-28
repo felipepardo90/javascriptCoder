@@ -77,7 +77,7 @@ function localStorageTablaPrestamo(plist) {
 
 /*
 
-TEST
+VALIDACIÓN
 
 */
 
