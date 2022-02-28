@@ -72,7 +72,6 @@
               placeholder="Nombre/s"
               value=""
               required
-              
             />
 
             <input
@@ -128,41 +127,45 @@
               <option value="12">12 cuotas</option>
               <option value="18">18 cuotas</option>
               <option value="24">24 cuotas</option>
-              <option value="30">30 cuotas</option>      
+              <option value="30">30 cuotas</option>
               <option value="36">36 cuotas</option>
             </select>
 
             <button
               id="boton"
               class="btn btn-primary"
-              type="reset"
+              type="submit"
               onclick="pushDatos()"
             >
-              Simulá tu préstamo
+              Valor de cuotas
             </button>
 
-            <br /><br />
+            <h6 id="valorCuotas"></h6>
 
-            <!--<label for="customRange2" class="form-label form__container--labelRange">SIMULADOR</label>
-              <input type="range" class="form-range" min="0" max="5" id="customRange2"> -->
-
-            <div class="container">
-              <table id="tabla" class="tabla table table-striped table-success">
-                <thead class="thead-inverse">
-                  <tr>
-                    <th>Monto</th>
-                    <th>Cuotas</th>
-                    <th>Final</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
           </div>
         </form>
 
+        <div class="container">
+          <button id="botonTabla" class="btn btn-primary" type="reset">
+            Mostrar últimas simulaciones
+          </button>
+          <table id="tabla" class="tabla table table-striped table-success">
+            <thead class="thead-inverse">
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Monto</th>
+                <th>Cuotas</th>
+                <th>Final</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
         <!-- frame Dólar -->
 
-        <div class="frameDolar">
+        <!-- <div class="frameDolar">
           <iframe
             width="300px"
             height="690px"
@@ -171,8 +174,10 @@
             scrolling="0"
             allowfullscreen=""
           ></iframe>
-        </div>
+        </div> -->
       </div>
+
+      <!-- Botón cotización del dólar -->
 
       <div class="dolarToggle">
         <button id="dolarToggle">
