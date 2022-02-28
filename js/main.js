@@ -37,7 +37,6 @@ FUNCION DESDE EL BOTÓN DEL FORM EN HTML
 */
 
 function pushDatos() {
-
   // PRÉSTAMO
 
   const seleccionarMonto = document.getElementById("monto").value;
@@ -49,11 +48,15 @@ function pushDatos() {
   const apellido = document.getElementById("apellido").value;
   const dni = document.getElementById("dni").value;
 
-  nuevoPrestamo = new Prestamo(seleccionarMonto, seleccionarCuotas, nombre, apellido, dni);
+  nuevoPrestamo = new Prestamo(
+    seleccionarMonto,
+    seleccionarCuotas,
+    nombre,
+    apellido,
+    dni
+  );
 
   let valorCuotas = nuevoPrestamo.amortizacion();
-
-  
 }
 
 /* AGREGANDO TABLA AL LOCAL STORAGE*/
@@ -71,3 +74,45 @@ function getTablaPrestamo() {
 function localStorageTablaPrestamo(plist) {
   localStorage.setItem("localTablaPrestamo", JSON.stringify(plist));
 }
+
+/*
+
+TEST
+
+*/
+
+const btnEnviar = document.getElementById("boton");
+
+const validate = (e) => {
+  e.preventDefault();
+  const nombre = document.getElementById("nombre");
+  const apellido = document.getElementById("apellido");
+  const dni = document.getElementById("dni");
+  const monto = document.getElementById("monto");
+  const cuotas = document.getElementById("cuotas");
+  if (nombre.value === "") {
+    alert("Por favor, escribe tu nombre");
+    nombre.focus();
+    return false;
+  } else if (apellido.value === "") {
+    alert("Por favor, escribe tu apellido");
+    apellido.focus();
+    return false;
+  } else if (dni.value === "") {
+    alert("Por favor, ingresa tu DNI");
+    dni.focus();
+    return false;
+  } else if (monto.value === "") {
+    alert("Por favor, ingresa un monto");
+    monto.focus();
+    return false;
+  }else if (cuotas.value === "") {
+    alert("Por favor, ingresa la cantidad de cuotas");
+    cuotas.focus();
+    return false;
+  }else {
+    return true;
+  }
+};
+
+btnEnviar.addEventListener("click", validate);
