@@ -1,8 +1,9 @@
-.color1 {color: #121f56;}
-.color2 {color: #603e8c;}
-.color3 {color: #20b1d8;}
-.color4 {color: #20dbd8;}
-.color5 {color: #b9efed;}
+
+// IMPORTs //
+@import "./sass/form";
+@import "./sass/navbar";
+@import "./sass/_vars.scss";
+
 
 * {
   margin: 0;
@@ -34,8 +35,8 @@
 // DOLAR
 
 .user {
-  background-color: darkcyan;
-  border: 3px double ;
+  background-color: $color2;
+  border: 3px double $color4;
   color: white;
   text-align: center;
   display: inline-block;
@@ -54,6 +55,3 @@
   display: none;
 }
 
-// IMPORTs //
-@import "./sass/form";
-@import "./sass/navbar";

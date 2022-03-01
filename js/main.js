@@ -1,5 +1,5 @@
 $("body").css({
-  "background-color": "orangered",
+  "background-color": "#fffdff",
   height: "100vh",
   "font-family": "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
 });
@@ -63,13 +63,16 @@ function pushDatos() {
 
 function getTablaPrestamo() {
   let storedList = localStorage.getItem("localTablaPrestamo");
-  if (storedList == null) {
-    tablaPrestamo = [];
+
+    if (storedList === "") {
+    tablaPrestamo = []
   } else {
-    tablaPrestamo = JSON.parse(storedList);
+    tablaPrestamo = JSON.parse(storedList)
   }
-  return tablaPrestamo;
+  return tablaPrestamo
 }
+
+
 
 function localStorageTablaPrestamo(plist) {
   localStorage.setItem("localTablaPrestamo", JSON.stringify(plist));
@@ -106,13 +109,35 @@ const validate = (e) => {
     alert("Por favor, ingresa un monto");
     monto.focus();
     return false;
-  }else if (cuotas.value === "") {
+  } else if (cuotas.value === "") {
     alert("Por favor, ingresa la cantidad de cuotas");
     cuotas.focus();
     return false;
-  }else {
+  } else {
     return true;
   }
 };
 
 btnEnviar.addEventListener("click", validate);
+
+/*MOSTRAR mediante un botón  el valor de las cuotas del préstamo jQuery*/
+
+// $(document).ready(function () {
+//   $("#boton").click(function () {
+//     $("#valorCuotas").fadeIn(4000);
+//   });
+// });
+
+const boton = document.getElementById("boton");
+
+boton.addEventListener("click", simulation());
+
+function simulation (seleccionarMonto, seleccionarCuotas){
+  document.getElementById(
+    "valorCuotas"
+  ).innerHTML = `<p style="color:#2a80f1;font-size: 48px;">${nuevoPrestamo.valorCuotas}</p>`;
+
+}
+
+seleccionarMonto && simulation()
+seleccionarCuotas && simulation()
