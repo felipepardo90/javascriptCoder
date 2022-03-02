@@ -17,23 +17,25 @@ $(document).ready(function () {
   });
 });
 
-/**
- push de datos a array
- */
+/*MOSTRAR mediante un botón  el valor de las cuotas del préstamo jQuery*/
 
-let tablaPrestamo = [];
+// $(document).ready(function () {
+//   $("#boton").click(function () {
+//     $("#valorCuotas").fadeIn(4000);
+//   });
+// });
 
-const botonTabla = document.getElementById("botonTabla");
+const boton = document.getElementById("boton");
 
-botonTabla.addEventListener("click", () => {
-  tablaPrestamo.push(nuevoPrestamo);
-  document.getElementById(
-    "tabla"
-  ).innerHTML += `<tbody><td>${nuevoPrestamo.nombre}</td><td>${nuevoPrestamo.apellido}</td><td>${nuevoPrestamo.dni}</td><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`;
-  // alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
+boton.addEventListener("click", simulation);
 
-  localStorageTablaPrestamo(tablaPrestamo);
+function simulation (seleccionarMonto, seleccionarCuotas){
+  
+  
+    document.getElementById(
+      "valorCuotas"
+    ).innerHTML = `<h6 style="color:#0064e0">Tus cuotas a pagar serán de</h6><br><p style="color:#2a80f1;font-size: 48px;">${nuevoPrestamo.valorCuotas}</p>`;
+  
+  }
 
-  // console.log(tablaPrestamo)
-});
 
