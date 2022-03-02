@@ -59,6 +59,29 @@ function pushDatos() {
   let valorCuotas = nuevoPrestamo.amortizacion();
 }
 
+/*
+
+ push de datos a array
+ 
+ */
+
+let tablaPrestamo = [];
+
+const botonTabla = document.getElementById("botonTabla");
+
+botonTabla.addEventListener("click", () => {
+  tablaPrestamo.push(nuevoPrestamo);
+  document.getElementById(
+    "tabla"
+  ).innerHTML += `<tbody><td>${nuevoPrestamo.nombre}</td><td>${nuevoPrestamo.apellido}</td><td>${nuevoPrestamo.dni}</td><td>${nuevoPrestamo.monto}</td><td>${nuevoPrestamo.cuotas}</td><td>${nuevoPrestamo.valorCuotas}</td></tbody>`;
+  // alert(`Solicitaste un préstamo por ${nuevoPrestamo.monto} a pagar en ${nuevoPrestamo.cuotas} cuotas. El valor final de cada cuota será de ${nuevoPrestamo.valorCuotas}. ¿Desea continuar? `)
+
+  localStorageTablaPrestamo(tablaPrestamo);
+
+  // console.log(tablaPrestamo)
+});
+
+
 /* AGREGANDO TABLA AL LOCAL STORAGE*/
 
 function getTablaPrestamo() {
@@ -120,24 +143,8 @@ const validate = (e) => {
 
 btnEnviar.addEventListener("click", validate);
 
-/*MOSTRAR mediante un botón  el valor de las cuotas del préstamo jQuery*/
 
-// $(document).ready(function () {
-//   $("#boton").click(function () {
-//     $("#valorCuotas").fadeIn(4000);
-//   });
-// });
+  
+  
 
-const boton = document.getElementById("boton");
 
-boton.addEventListener("click", simulation());
-
-function simulation (seleccionarMonto, seleccionarCuotas){
-  document.getElementById(
-    "valorCuotas"
-  ).innerHTML = `<p style="color:#2a80f1;font-size: 48px;">${nuevoPrestamo.valorCuotas}</p>`;
-
-}
-
-seleccionarMonto && simulation()
-seleccionarCuotas && simulation()
