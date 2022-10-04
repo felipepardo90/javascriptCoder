@@ -1,7 +1,7 @@
 /*
 LLamada a API de cotización de dólar en tiempo real con fetch, 
 filtrando datos en una constante y luego integrarlos al cuerpo con DOM
-*/ 
+*/
 function fetchData() {
   fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
     .then((response) => {
@@ -16,8 +16,8 @@ function fetchData() {
           case "Dolar turista":
           case "Dolar Contado con Liqui":
           case "Dolar":
+          case "Dolar Bolsa":
             return item;
-            break;
           default:
             return null;
         }
@@ -25,7 +25,7 @@ function fetchData() {
       let html = "";
       // Integrando datos de la API en el HTML
       filteredOutput.forEach((item) => {
-        html += '<div class="user container">';
+        html += '<div class="user">';
         html += `<p>💵${item.casa.nombre}</p>`;
         html += `<p>Compra: $${item.casa.compra}</p>`;
         html += `<p>Venta: $${item.casa.venta}</p>`;
