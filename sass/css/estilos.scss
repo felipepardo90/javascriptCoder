@@ -1,9 +1,7 @@
-
 // IMPORTs //
 @import "./sass/form";
 @import "./sass/navbar";
 @import "./sass/_vars.scss";
-
 
 * {
   margin: 0;
@@ -11,6 +9,9 @@
   box-sizing: border-box;
 }
 
+.container {
+  background-color: lightblue;
+}
 
 .imagenPortada {
   img {
@@ -38,11 +39,17 @@
   background-color: $color2;
   border: 3px double $color4;
   color: white;
+  width: 50%;
+  flex-wrap: wrap;
   text-align: center;
   display: inline-block;
 }
 
-
+@media (max-width: 768px){
+  .user{
+    width: 100%;
+  }
+}
 
 // BODY
 
@@ -54,4 +61,3 @@
 #app {
   display: none;
 }
-
