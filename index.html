@@ -35,103 +35,106 @@
       </label>
     </nav>
 
+    <!-- PRINCIPAL -->
+
     <main class="container">
       <div class="imagenPortada">
         <img src="./imagenes/familia.jpg" alt="Familia" />
       </div>
 
-      <div class="prestamosForm">
+      <div class="main-container">
         <!--  FORM -->
+        <section class="form-section">
+          <form class="form" id="form">
+            <h1 class="form__titulo">¡Simulá tu préstamo ahora!</h1>
 
-        <form class="form" id="form">
-          <h1 class="form__titulo">¡Simulá tu préstamo ahora!</h1>
+            <div class="form__container">
+              <!-- DATOS PERSONA -->
 
-          <div class="form__container">
-            <!-- DATOS PERSONA -->
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                class="form__container--input"
+                placeholder="Nombre/s"
+                value=""
+                required
+              />
 
-            <input
-              id="nombre"
-              name="nombre"
-              type="text"
-              class="form__container--input"
-              placeholder="Nombre/s"
-              value=""
-              required
-            />
+              <input
+                id="apellido"
+                name="apellido"
+                type="text"
+                class="form__container--input"
+                placeholder="Apellido/s"
+                value=""
+                required
+              />
 
-            <input
-              id="apellido"
-              name="apellido"
-              type="text"
-              class="form__container--input"
-              placeholder="Apellido/s"
-              value=""
-              required
-            />
+              <input
+                id="dni"
+                name="dni"
+                type="number"
+                class="form__container--input"
+                placeholder="DNI"
+                value=""
+                required
+              />
 
-            <input
-              id="dni"
-              name="dni"
-              type="number"
-              class="form__container--input"
-              placeholder="DNI"
-              value=""
-              required
-            />
+              <!-- MONTO -->
 
-            <!-- MONTO -->
+              <select
+                class="form__container--select"
+                aria-label=""
+                id="monto"
+                autofocus
+                required
+              >
+                <option value="" selected disabled>Seleccione un monto</option>
+                <option value="10.000">10.000</option>
+                <option value="20.000">20.000</option>
+                <option value="30.000">30.000</option>
+                <option value="50.000">50.000</option>
+                <option value="75.000">75.000</option>
+                <option value="90.000">90.000</option>
+                <option value="100.000">100.000</option>
+                <option value="150.000">150.000</option>
+                <option value="200.000">200.000</option>
+              </select>
 
-            <select
-              class="form__container--select"
-              aria-label=""
-              id="monto"
-              autofocus
-              required
-            >
-              <option value="" selected disabled>Seleccione un monto</option>
-              <option value="10.000">10.000</option>
-              <option value="20.000">20.000</option>
-              <option value="30.000">30.000</option>
-              <option value="50.000">50.000</option>
-              <option value="75.000">75.000</option>
-              <option value="90.000">90.000</option>
-              <option value="100.000">100.000</option>
-              <option value="150.000">150.000</option>
-              <option value="200.000">200.000</option>
-            </select>
+              <!-- CUOTAS -->
 
-            <!-- CUOTAS -->
+              <select
+                class="form__container--select"
+                aria-label=""
+                id="cuotas"
+                required
+              >
+                <option value="" selected disabled>Cuotas</option>
+                <option value="12">12 cuotas</option>
+                <option value="18">18 cuotas</option>
+                <option value="24">24 cuotas</option>
+                <option value="30">30 cuotas</option>
+                <option value="36">36 cuotas</option>
+              </select>
 
-            <select
-              class="form__container--select"
-              aria-label=""
-              id="cuotas"
-              required
-            >
-              <option value="" selected disabled>Cuotas</option>
-              <option value="12">12 cuotas</option>
-              <option value="18">18 cuotas</option>
-              <option value="24">24 cuotas</option>
-              <option value="30">30 cuotas</option>
-              <option value="36">36 cuotas</option>
-            </select>
+              <button
+                id="boton"
+                class="btn btn-primary"
+                type="submit"
+                onclick="pushDatos()"
+              >
+                Simular valor de cuotas
+              </button>
 
-            <button
-              id="boton"
-              class="btn btn-primary"
-              type="submit"
-              onclick="pushDatos()"
-            >
-              Simular valor de cuotas
-            </button>
-
-            <div id="valorCuotas"></div>
-          </div>
-        </form>
+              <div id="valorCuotas"></div>
+            </div>
+          </form>
+        </section>
 
         <!-- frame Dólar -->
 
-        <div class="frameDolar">
+        <section class="frame-dolar">
           <iframe
             width="300px"
             height="690px"
@@ -140,39 +143,36 @@
             scrolling="0"
             allowfullscreen=""
           ></iframe>
-        </div>
+        </section>
       </div>
+      <div class="container bottom-section">
+        <!-- TABLA REGISTROS -->
+        <section class="table-section">
+          <button id="botonTabla" class="btn btn-primary" type="reset">
+            Mostrar últimas simulaciones
+          </button>
+          <table id="tabla" class="tabla table table-striped table-success">
+            <thead class="thead-inverse">
+              <tr>
+                <th>Nombre</th>
+                <th>Monto</th>
+                <th>Cuotas</th>
+                <th>Valor de cuotas</th>
+              </tr>
+            </thead>
+          </table>
+        </section>
 
-      <!-- Botón cotización del dólar -->
-      <div class="dolarToggle">
-        <button id="dolarToggle">
-          Click para ver la cotización del dolar en tiempo real
-        </button>
+        <!-- JQUERY ANIMACIÓN SHOW/HIDE -->
+
+        <section class="toggle-section">
+          <button id="dolarToggle">
+            Click para ver la cotización del dolar en tiempo real
+          </button>
+          <div id="app"></div>
+        </section>
       </div>
     </main>
-
-    <div class="container">
-      <div id="app"></div>
-
-      <section>
-        <button id="botonTabla" class="btn btn-primary" type="reset">
-          Mostrar últimas simulaciones
-        </button>
-        <table id="tabla" class="tabla table table-striped table-success">
-          <thead class="thead-inverse">
-            <tr>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>DNI</th>
-              <th>Monto</th>
-              <th>Cuotas</th>
-              <th>Valor de cuotas (con IVA)</th>
-            </tr>
-          </thead>
-        </table>
-      </section>
-      
-    </div>
 
     <script src="js/ajax.js"></script>
     <script src="js/main.js"></script>
