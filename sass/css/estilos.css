@@ -224,7 +224,8 @@ main {
   display: flex;
 }
 
-.table-section, .toggle-section {
+.table-section,
+.toggle-section {
   width: 50%;
 }
 
