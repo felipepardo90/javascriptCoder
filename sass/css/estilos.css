@@ -1,19 +1,21 @@
-.prestamosForm {
-  background-color: whitesmoke;
+.main-container {
+  background-color: #fffdff;
   display: flex;
+  padding: 4.5em 3em;
 }
 
-.frameDolar {
+.frame-dolar, .form {
   margin: auto;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px black;
 }
 
 .form {
-  background-color: #a3a4ff;
-  color: white;
+  background-color: #fffdff;
+  color: #0064e0;
   width: 90%;
-  margin: 20px;
   max-width: 500px;
-  padding: 4.5em 3em;
+  padding: 3em 1.5em 0 1.5em;
   text-align: center;
 }
 .form__titulo {
@@ -37,9 +39,6 @@
   padding: 0.6em 0.3em;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.form__container--input:invalid {
-  border: 1px solid red;
-}
 
 .btn {
   border-radius: 5px;
@@ -51,9 +50,8 @@
 }
 
 @media (max-width: 1010px) {
-  .prestamosForm {
+  .main-container {
     flex-direction: column;
-    padding: 4.5em 3em;
   }
   .form {
     margin: 20px auto;
@@ -175,8 +173,9 @@
   box-sizing: border-box;
 }
 
-.container {
-  background-color: lightblue;
+main {
+  height: 300vh;
+  background-color: #0064e0;
 }
 
 .imagenPortada img {
@@ -218,4 +217,17 @@
 
 #app {
   display: none;
+}
+
+.bottom-section {
+  background-color: transparent;
+  display: flex;
+}
+
+.table-section, .toggle-section {
+  width: 50%;
+}
+
+.toggle-section button {
+  width: 100%;
 }/*# sourceMappingURL=estilos.css.map */

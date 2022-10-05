@@ -1,7 +1,5 @@
 // IMPORTs //
-@import "./sass/form";
-@import "./sass/navbar";
-@import "./sass/_vars.scss";
+@import "./sass/form", "./sass/navbar", "./sass/_vars.scss";
 
 * {
   margin: 0;
@@ -9,9 +7,11 @@
   box-sizing: border-box;
 }
 
-.container {
-  background-color: lightblue;
+main {
+  height: 300vh;
+  background-color: $color1;
 }
+
 
 .imagenPortada {
   img {
@@ -45,8 +45,8 @@
   display: inline-block;
 }
 
-@media (max-width: 768px){
-  .user{
+@media (max-width: 768px) {
+  .user {
     width: 100%;
   }
 }
@@ -60,4 +60,19 @@
 
 #app {
   display: none;
+}
+
+.bottom-section {
+  background-color: transparent;
+  display: flex;
+}
+
+.table-section, .toggle-section{
+  width: 50%;
+}
+
+.toggle-section{
+  button{
+    width: 100%;
+  }
 }

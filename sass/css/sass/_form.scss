@@ -2,23 +2,26 @@
 
 @import "_vars.scss";
 
-.prestamosForm {
-  background-color: whitesmoke;
+.main-container {
+  background-color: $color5;
   display: flex;
+  padding: 4.5em 3em;
 }
 
-.frameDolar {
+.frame-dolar {
   margin: auto;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px black;
 }
 
 .form {
-  background-color: $color3;
-  color: white;
+  background-color: $color5;
+  color: $color1;
   width: 90%;
-  margin: 20px;
   max-width: 500px;
-  padding: 4.5em 3em;
+  padding: 3em 1.5em 0 1.5em;
   text-align: center;
+  @extend .frame-dolar;
   &__titulo {
     font-size: 32px;
     margin-bottom: 0.5em;
@@ -39,9 +42,9 @@
     font-size: 1rem;
     padding: 0.6em 0.3em;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    &:invalid {
-      border: 1px solid red;
-    }
+    // &:invalid {
+    //   border: 1px solid red;
+    // }
   }
 }
 
@@ -55,9 +58,8 @@
 }
 
 @media (max-width: 1010px) {
-  .prestamosForm {
+  .main-container {
     flex-direction: column;
-    padding: 4.5em 3em;
   }
   .form {
     margin: 20px auto;
