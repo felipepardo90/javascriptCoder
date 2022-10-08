@@ -52,6 +52,7 @@
 @media (max-width: 1010px) {
   .main-container {
     flex-direction: column;
+    padding: 0;
   }
   .form {
     margin: 20px auto;
@@ -231,4 +232,4 @@ main {
 
 .toggle-section button {
   width: 100%;
-}/*# sourceMappingURL=estilos.css.map */
+}
